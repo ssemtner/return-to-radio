@@ -1,4 +1,4 @@
-import { Collapse, Typography, List } from 'antd'
+import { Collapse, List, Typography } from 'antd'
 import React from 'react'
 import cast from '../types/cast'
 

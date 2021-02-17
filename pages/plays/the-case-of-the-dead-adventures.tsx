@@ -1,13 +1,14 @@
 import { Typography } from 'antd'
 import React from 'react'
 import Casting from '../../components/casting'
+import Video from '../../components/video'
 import cast from '../../types/cast'
 
 const { Text, Title } = Typography
 
 export default function Home({ post }: { post: string }) {
     const cast: cast = {
-        assistantDirectors: [ 'Easha A', 'Stella M'],
+        assistantDirectors: ['Easha A', 'Stella M'],
         foleyArtists: ['Foley C', 'Foley D'],
         actors: [
             {
