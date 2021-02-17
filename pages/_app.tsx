@@ -6,18 +6,17 @@ import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
     return (
-        <Layout style={{ textAlign: 'center', minHeight: '100vh' }}>
+        <Layout style={{ textAlign: 'center', minHeight: '100vh'}}>
             <Layout.Header
-                style={{ position: 'fixed', zIndex: 1, width: '100%' }}
+                style={{ position: 'fixed', width: '100%', zIndex: 1 }}
             >
                 <Navbar />
             </Layout.Header>
-            <Layout.Content style={{ marginTop: '100px' }}>
+            <Layout.Content style={{ margin: '100px 0'}}>
                 <Component {...pageProps} />
             </Layout.Content>
             <Layout.Footer
                 style={{
-                    marginTop: '150px',
                     position: 'fixed',
                     bottom: '0',
                     width: '100%',
