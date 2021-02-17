@@ -20,6 +20,10 @@ export default function Navbar() {
             name: 'Test',
             path: '/test',
         },
+        {
+            name: 'The Case of the Dead Adventures',
+            path: '/plays/the-case-of-the-dead-adventures'
+        }
     ]
 
     return (
