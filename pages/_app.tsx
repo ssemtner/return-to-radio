@@ -1,10 +1,25 @@
 import { Layout } from 'antd'
 import type { AppProps } from 'next/app'
+import { useRouter } from 'next/router'
+import React from 'react'
 import Footer from '../components/footer'
 import Navbar from '../components/navbar'
 import '../styles/globals.css'
+import * as gtag from '../utils/gtag'
 
 function MyApp({ Component, pageProps }: AppProps) {
+    const router = useRouter()
+
+    React.useEffect(() => {
+        const handleRouteChange = (url: URL) => {
+            gtag.pageview(url)
+        }
+        router.events.on('routeChangeComplete', handleRouteChange)
+        return () => {
+            router.events.off('routeChangeComplete', handleRouteChange)
+        }
+    }, [router.events])
+
     return (
         <Layout style={{ textAlign: 'center', minHeight: '100vh' }}>
             <Layout.Header
