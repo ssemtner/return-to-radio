@@ -20,7 +20,6 @@ export default function Navbar() {
             path: '/plays/test',
         },
     ]
-
     return (
         <Menu
             theme='dark'

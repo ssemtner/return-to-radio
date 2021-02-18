@@ -6,6 +6,9 @@ import React from 'react'
 import Casting from '../../components/casting'
 import Video from '../../components/video'
 import Play from '../../types/play'
+import Head from 'next/head'
+import { getAllPlays } from '../../lib/files'
+
 const { Text, Title } = Typography
 
 const complete: boolean = false
@@ -13,6 +16,10 @@ const complete: boolean = false
 export default function PlayDetails(play: Play) {
     return (
         <>
+            <Head>
+                <title>{play.title}</title>
+            </Head>
+
             <Title>{play.title}</Title>
             <Title level={3}>Team {play.team}</Title>
 
@@ -54,13 +61,12 @@ export const getStaticProps: GetStaticProps = async ({ params }: Params) => {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-    const files = fs.readdirSync(`${cwd()}/_plays/`)
-
+    const files = getAllPlays()
     return {
         paths: files.map((element) => {
             return {
                 params: {
-                    path: element.split('.json')[0],
+                    path: element,
                 },
             }
         }),

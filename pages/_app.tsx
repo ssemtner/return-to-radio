@@ -29,7 +29,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
             >
                 <Navbar />
             </Layout.Header>
-            <Layout.Content style={{ margin: '100px 0' }}>
+            <Layout.Content style={{ margin: '100px 10vw' }}>
                 <Component {...pageProps} />
             </Layout.Content>
         </Layout>
