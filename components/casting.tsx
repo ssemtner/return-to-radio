@@ -1,6 +1,6 @@
 import { Collapse, List, Typography } from 'antd'
 import React from 'react'
-import cast from '../types/cast'
+import Cast from '../types/cast'
 
 const { Text } = Typography
 
@@ -9,7 +9,7 @@ interface panel {
     header: string
 }
 
-export default function Casting({ cast }: { cast: cast }) {
+export default function Casting({ cast }: { cast: Cast }) {
     const generatePanel = (props) => {
         return (
             <Collapse.Panel

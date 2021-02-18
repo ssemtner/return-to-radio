@@ -1,0 +1,53 @@
+{
+    "title": "TEST",
+    "team": "Apple",
+    "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "date": "March 15th/16th",
+    "description": "Hi! Here is some text that is a description of the play. Here is some text that is a description of the play. Here is sometext that is a description of the play. Here is some text that is a description of the play. Here is some text that is a description of the play. Here is some text that is a description of the play.",
+    "cast": {
+        "assistantDirectors": ["Easha A", "Stella M"],
+        "foleyArtists": ["Foley C", "Foley D"],
+        "actors": [
+            {
+                "role": "Sherlock Holmes",
+                "actor": "Jesse R"
+            },
+            {
+                "role": "Dr. Watson",
+                "actor": "Markus H"
+            },
+            {
+                "role": "Henri",
+                "actor": "Markus H"
+            },
+            {
+                "role": "Duc",
+                "actor": "Jesse R"
+            },
+            {
+                "role": "Announcer",
+                "actor": "Annalisa T"
+            },
+            {
+                "role": "Prefect",
+                "actor": "Annalisa T"
+            },
+            {
+                "role": "Yvette Corvey",
+                "actor": "Zaria G"
+            },
+            {
+                "role": "Inspector Charel",
+                "actor": "Jonah S-W"
+            },
+            {
+                "role": "Reginald Shipton",
+                "actor": "Adam S"
+            },
+            {
+                "role": "Officer",
+                "actor": "Adam S"
+            }
+        ]
+    }
+}

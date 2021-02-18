@@ -1,13 +1,15 @@
 import { Layout } from 'antd'
+import { GetStaticProps } from 'next'
 import type { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
 import React from 'react'
 import Footer from '../components/footer'
 import Navbar from '../components/navbar'
 import '../styles/globals.css'
+import Route from '../types/route'
 import * as gtag from '../utils/gtag'
 
-function MyApp({ Component, pageProps }: AppProps) {
+export default function MyApp({ Component, pageProps }: AppProps) {
     const router = useRouter()
 
     React.useEffect(() => {
@@ -30,17 +32,6 @@ function MyApp({ Component, pageProps }: AppProps) {
             <Layout.Content style={{ margin: '100px 0' }}>
                 <Component {...pageProps} />
             </Layout.Content>
-            <Layout.Footer
-                style={{
-                    position: 'fixed',
-                    bottom: '0',
-                    width: '100%',
-                }}
-            >
-                <Footer />
-            </Layout.Footer>
         </Layout>
     )
 }
-
-export default MyApp

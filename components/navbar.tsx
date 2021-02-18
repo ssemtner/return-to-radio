@@ -1,29 +1,24 @@
 import { Menu } from 'antd'
-import { route } from 'next/dist/next-server/server/router'
 import { useRouter } from 'next/router'
 import React from 'react'
-
-interface route {
-    name: string
-    path: string
-}
+import Route from '../types/route'
 
 export default function Navbar() {
     const router = useRouter()
 
-    const routes: route[] = [
+    const routes: Route[] = [
         {
             name: 'Home',
             path: '/',
         },
         {
-            name: 'Test',
-            path: '/test',
+            name: 'The Case of the Dead Adventures',
+            path: '/plays/the-case-of-the-dead-adventuress',
         },
         {
-            name: 'The Case of the Dead Adventures',
-            path: '/plays/the-case-of-the-dead-adventures'
-        }
+            name: 'Test',
+            path: '/plays/test',
+        },
     ]
 
     return (
