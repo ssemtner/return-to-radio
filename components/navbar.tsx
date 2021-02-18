@@ -3,23 +3,13 @@ import { useRouter } from 'next/router'
 import React from 'react'
 import Route from '../types/route'
 
-export default function Navbar() {
+interface NavbarProps {
+    routes: Route[]
+}
+
+export default function Navbar(props: NavbarProps) {
     const router = useRouter()
 
-    const routes: Route[] = [
-        {
-            name: 'Home',
-            path: '/',
-        },
-        {
-            name: 'The Case of the Dead Adventures',
-            path: '/plays/the-case-of-the-dead-adventuress',
-        },
-        {
-            name: 'Test',
-            path: '/plays/test',
-        },
-    ]
     return (
         <Menu
             theme='dark'
@@ -27,7 +17,7 @@ export default function Navbar() {
             defaultSelectedKeys={[router.pathname]}
             onClick={(e) => router.push(e.key.toString())}
         >
-            {routes.map((e) => (
+            {props.routes.map((e) => (
                 <Menu.Item key={e.path}>{e.name}</Menu.Item>
             ))}
         </Menu>

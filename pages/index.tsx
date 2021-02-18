@@ -1,15 +1,23 @@
-import { Card, Col, Divider, Row, Typography } from 'antd'
+import { Card, Col, Divider, Layout, Row, Typography } from 'antd'
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import React from 'react'
-import { getAllPlayTitlesAndPaths } from '../lib/files'
+import { getRoutes } from '../lib/files'
 import Link from 'next/link'
+import Navbar from '../components/navbar'
+import BaseLayout from '../components/baseLayout'
+import Route from '../types/route'
+import PlayDetails from './plays/[path]'
 
 const { Text, Title } = Typography
 
-export default function Home(props) {
+interface HomeProps {
+    routes: Route[]
+}
+
+export default function Home(props: HomeProps) {
     return (
-        <>
+        <BaseLayout routes={props.routes}>
             <Head>
                 <title>Return to Radio</title>
             </Head>
@@ -23,22 +31,22 @@ export default function Home(props) {
             <Divider />
 
             <Row gutter={[16, 16]}>
-                {props.plays.map((play) => (
+                {props.routes.map((play) => (
                     <Col xs={24} lg={12}>
-                        <Link href={`/plays/${play.path}`}>
+                        <Link href={play.path}>
                             <Card hoverable>
-                                <Text>{play.title}</Text>
+                                <Text>{play.name}</Text>
                             </Card>
                         </Link>
                     </Col>
                 ))}
             </Row>
-        </>
+        </BaseLayout>
     )
 }
 
 export const getStaticProps: GetStaticProps = async () => {
     return {
-        props: { plays: getAllPlayTitlesAndPaths() },
+        props: { routes: getRoutes() },
     }
 }

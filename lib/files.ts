@@ -7,11 +7,11 @@ export function getAllPlays() {
         .map((item) => item.split('.json')[0])
 }
 
-export function getAllPlayTitlesAndPaths() {
+export function getRoutes() {
     return getAllPlays().map((item) => {
         return {
-            title: require(`../_plays/${item}.json`).title,
-            path: item,
+            name: require(`../_plays/${item}.json`).title,
+            path: `/plays/${item}`,
         }
     })
 }

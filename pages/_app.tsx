@@ -22,16 +22,5 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         }
     }, [router.events])
 
-    return (
-        <Layout style={{ textAlign: 'center', minHeight: '100vh' }}>
-            <Layout.Header
-                style={{ position: 'fixed', width: '100%', zIndex: 1 }}
-            >
-                <Navbar />
-            </Layout.Header>
-            <Layout.Content style={{ margin: '100px 10vw' }}>
-                <Component {...pageProps} />
-            </Layout.Content>
-        </Layout>
-    )
+    return <Component {...pageProps} />
 }
