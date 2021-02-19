@@ -30,7 +30,7 @@ export default function Home(props: HomeProps) {
 
             <Row gutter={[16, 16]}>
                 {props.routes.map((play) => (
-                    <Col xs={24} lg={12}>
+                    <Col key={play.path} xs={24} lg={12}>
                         <Link href={play.path}>
                             <Card hoverable>
                                 <Title level={4}>{play.name}</Title>

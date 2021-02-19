@@ -42,7 +42,7 @@ export default function PlayDetails(props: PlayDetailsProps) {
 
             <br />
 
-            <div style={{ textAlign: 'left', margin: '0 100px' }}>
+            <div style={{ textAlign: 'left', margin: '0 5vw' }}>
                 <Text>{props.play.description}</Text>
             </div>
 

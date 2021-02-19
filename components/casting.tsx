@@ -7,10 +7,11 @@ const { Text } = Typography
 interface panel {
     key: string
     header: string
+    body: string[]
 }
 
 export default function Casting({ cast }: { cast: Cast }) {
-    const generatePanel = (props) => {
+    const generatePanel = (props: panel) => {
         return (
             <Collapse.Panel
                 key={props.key}
@@ -27,7 +28,7 @@ export default function Casting({ cast }: { cast: Cast }) {
     }
 
     return (
-        <Collapse bordered={false} style={{ margin: '0 10vw' }}>
+        <Collapse bordered={false} style={{ margin: '0 5vw' }}>
             {generatePanel({
                 key: 'actors',
                 header: 'Actors',
