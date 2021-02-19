@@ -9,8 +9,11 @@ export function getAllPlays() {
 
 export function getRoutes() {
     return getAllPlays().map((item) => {
+        const data = require(`../_plays/${item}.json`)
+
         return {
-            name: require(`../_plays/${item}.json`).title,
+            name: data.title,
+            description: data.description,
             path: `/plays/${item}`,
         }
     })

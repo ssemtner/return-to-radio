@@ -1,13 +1,11 @@
-import { Card, Col, Divider, Layout, Row, Typography } from 'antd'
+import { Card, Col, Divider, Row, Typography } from 'antd'
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
-import React from 'react'
-import { getRoutes } from '../lib/files'
 import Link from 'next/link'
-import Navbar from '../components/navbar'
+import React from 'react'
 import BaseLayout from '../components/baseLayout'
+import { getRoutes } from '../lib/files'
 import Route from '../types/route'
-import PlayDetails from './plays/[path]'
 
 const { Text, Title } = Typography
 
@@ -35,7 +33,8 @@ export default function Home(props: HomeProps) {
                     <Col xs={24} lg={12}>
                         <Link href={play.path}>
                             <Card hoverable>
-                                <Text>{play.name}</Text>
+                                <Title level={4}>{play.name}</Title>
+                                <Text>{play.description}</Text>
                             </Card>
                         </Link>
                     </Col>
