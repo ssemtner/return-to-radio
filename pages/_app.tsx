@@ -1,13 +1,10 @@
-import { Layout } from 'antd'
-import { GetStaticProps } from 'next'
 import type { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
 import React from 'react'
-import Footer from '../components/footer'
-import Navbar from '../components/navbar'
 import '../styles/globals.css'
-import Route from '../types/route'
 import * as gtag from '../utils/gtag'
+import { AnimateSharedLayout } from 'framer-motion'
+import Particles from 'react-particles-js'
 
 export default function MyApp({ Component, pageProps }: AppProps) {
     const router = useRouter()
@@ -22,5 +19,72 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         }
     }, [router.events])
 
-    return <Component {...pageProps} />
+    return (
+        <>
+            <Particles
+                style={{ position: 'fixed', zIndex: 0 }}
+                params={{
+                    fpsLimit: 60,
+                    interactivity: {
+                        detectsOn: 'canvas',
+                        events: {
+                            onClick: {
+                                enable: true,
+                                mode: 'repulse',
+                            },
+                            resize: true,
+                        },
+                        modes: {
+                            repulse: {
+                                distance: 200,
+                                duration: 0.4,
+                            },
+                        },
+                    },
+                    particles: {
+                        color: {
+                            value: '#0e1111',
+                        },
+                        links: {
+                            color: '#555555',
+                            distance: 150,
+                            enable: true,
+                            opacity: 0,
+                            width: 1,
+                        },
+                        collisions: {
+                            enable: true,
+                        },
+                        move: {
+                            direction: 'none',
+                            enable: true,
+                            outMode: 'bounce',
+                            random: false,
+                            speed: 4,
+                            straight: false,
+                        },
+                        number: {
+                            density: {
+                                enable: true,
+                                value_area: 800,
+                            },
+                            value: 20,
+                        },
+                        opacity: {
+                            value: 0.5,
+                        },
+                        shape: {
+                            type: 'circle',
+                        },
+                        size: {
+                            random: true,
+                            value: 5,
+                        },
+                    },
+                    detectRetina: true,
+                }}
+            />
+            <Component {...pageProps} />
+        </>
+    )
 }

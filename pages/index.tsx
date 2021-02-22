@@ -3,6 +3,7 @@ import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
 import React from 'react'
+import Particles from 'react-particles-js'
 import BaseLayout from '../components/baseLayout'
 import { getRoutes } from '../lib/files'
 import Route from '../types/route'
@@ -20,12 +21,11 @@ export default function Home(props: HomeProps) {
                 <title>Return to Radio</title>
             </Head>
 
-            <Title>Project Name</Title>
+            <Title>Return to the Radio with Sherlock Holmes</Title>
 
             <Title level={3}>Subtitle</Title>
 
             <Text>Project description</Text>
-
             <Divider />
 
             <Row gutter={[16, 16]}>
