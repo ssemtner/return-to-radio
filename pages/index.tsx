@@ -1,9 +1,9 @@
 import { Card, Col, Divider, Row, Typography } from 'antd'
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import Particles from 'react-particles-js'
 import BaseLayout from '../components/baseLayout'
 import { getRoutes } from '../lib/files'
 import Route from '../types/route'
@@ -27,6 +27,8 @@ export default function Home(props: HomeProps) {
 
             <Text>Project description</Text>
             <Divider />
+
+            <Image src='/logo.png' alt='Sherlock' width={300} height={300} />
 
             <Row gutter={[16, 16]}>
                 {props.routes.map((play) => (

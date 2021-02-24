@@ -2,6 +2,7 @@ import { Layout } from 'antd'
 import React from 'react'
 import Route from '../types/route'
 import Navbar from './navbar'
+
 interface BaseLayoutProps {
     children: any
     routes: Route[]
@@ -10,9 +11,7 @@ interface BaseLayoutProps {
 export default function BaseLayout(props: BaseLayoutProps) {
     return (
         <div>
-            <Layout
-                style={{ textAlign: 'center', minHeight: '100vh', zIndex: -2 }}
-            >
+            <Layout style={{ textAlign: 'center', minHeight: '98vh' }}>
                 <Layout.Header
                     style={{ position: 'fixed', width: '100%', zIndex: 2 }}
                 >
