@@ -5,6 +5,7 @@ type Play = {
     team: string
     url: string
     date: string
+    complete: boolean
     description: string
     cast: Cast
 }

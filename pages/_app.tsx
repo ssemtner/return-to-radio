@@ -1,10 +1,9 @@
 import type { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
 import React from 'react'
+import Particles from 'react-particles-js'
 import '../styles/globals.css'
 import * as gtag from '../utils/gtag'
-import { AnimateSharedLayout } from 'framer-motion'
-import Particles from 'react-particles-js'
 
 export default function MyApp({ Component, pageProps }: AppProps) {
     const router = useRouter()

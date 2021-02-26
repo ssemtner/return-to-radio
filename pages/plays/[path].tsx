@@ -1,4 +1,4 @@
-import { Typography } from 'antd'
+import { Col, Divider, Row, Space, Typography } from 'antd'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import Head from 'next/head'
 import React from 'react'
@@ -11,8 +11,6 @@ import Route from '../../types/route'
 
 const { Text, Title } = Typography
 
-const complete: boolean = false
-
 interface PlayDetailsProps {
     play: Play
     routes: Route[]
@@ -24,31 +22,38 @@ export default function PlayDetails(props: PlayDetailsProps) {
             <Head>
                 <title>{props.play.title}</title>
             </Head>
+            <Space direction='vertical' size='middle'>
+                <Title>{props.play.title}</Title>
 
-            <Title>{props.play.title}</Title>
-            <Title level={3}>Team {props.play.team}</Title>
+                <Row align='middle'>
+                    <Col span={8}>
+                        <img src='/sherlock.png' height={200} />
+                    </Col>
+                    <Col span={8}>
+                        <Title level={3}>Team {props.play.team}</Title>
+                        {props.play.complete || (
+                            <Title level={4}>
+                                Come watch our performance on {props.play.date}
+                            </Title>
+                        )}
+                        <div style={{ textAlign: 'left' }}>
+                            <Text>{props.play.description}</Text>
+                        </div>
+                    </Col>
+                    <Col span={8}>
+                        <img src='/magnifying-glass.png' height={200} />
+                    </Col>
+                </Row>
 
-            {/* Show video or date depending complete variable */}
-            {complete ? (
-                <>
-                    <br />
-                    <Video url={props.play.url} />
-                </>
-            ) : (
-                <Title level={4}>
-                    Come watch our performance on {props.play.date}
-                </Title>
-            )}
+                {!props.play.complete || <Video url={props.play.url} />}
 
-            <br />
+                <br />
+                <Divider />
 
-            <div style={{ textAlign: 'left', margin: '0 5vw' }}>
-                <Text>{props.play.description}</Text>
-            </div>
+                <Title level={5}>Directed By Damon J. Shearer</Title>
 
-            <br />
-
-            <Casting cast={props.play.cast} />
+                <Casting cast={props.play.cast} />
+            </Space>
         </BaseLayout>
     )
 }
@@ -63,7 +68,7 @@ export const getStaticProps: GetStaticProps = async ({ params }: Params) => {
     return {
         props: {
             play: require(`../../_plays/${params.path}.json`),
-            routes: getRoutes()
+            routes: getRoutes(),
         },
     }
 }

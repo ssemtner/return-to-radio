@@ -1,4 +1,4 @@
-import { Image, Menu } from 'antd'
+import { Menu } from 'antd'
 import { useRouter } from 'next/router'
 import React from 'react'
 import Route from '../types/route'
@@ -12,7 +12,11 @@ export default function Navbar(props: NavbarProps) {
 
     return (
         <>
-            <img src='/logo.png' height={48} style={{float: 'left', margin: '8px 16px 8px -16px'}}/>
+            <img
+                src='/logo.png'
+                height={48}
+                style={{ float: 'left', margin: '8px 16px 8px -16px' }}
+            />
 
             <Menu
                 theme='dark'

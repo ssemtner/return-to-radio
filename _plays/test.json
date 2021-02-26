@@ -3,6 +3,7 @@
     "team": "Apple",
     "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     "date": "March 15th/16th",
+    "complete": true,
     "description": "Hi! Here is some text that is a description of the play. Here is some text that is a description of the play. Here is sometext that is a description of the play. Here is some text that is a description of the play. Here is some text that is a description of the play. Here is some text that is a description of the play.",
     "cast": {
         "assistantDirectors": ["Easha A", "Stella M"],

@@ -1,12 +1,13 @@
 {
-    "title": "The Case of the Dead Adventuress",
+    "title": "The Case of the Dead Adventures",
     "team": "Lemon",
     "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     "date": "March 15th/16th",
+    "complete": false,
     "description": "Hi! Here is some text that is a description of the play. Here is some text that is a description of the play. Here is sometext that is a description of the play. Here is some text that is a description of the play. Here is some text that is a description of the play. Here is some text that is a description of the play.",
     "cast": {
         "assistantDirectors": ["Easha A", "Stella M"],
-        "foleyArtists": ["Foley C", "Foley D"],
+        "foleyArtists": ["Tamsen B", "Foley D"],
         "actors": [
             {
                 "role": "Sherlock Holmes",
