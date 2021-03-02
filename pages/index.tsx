@@ -4,14 +4,20 @@ import Head from 'next/head'
 import Link from 'next/link'
 import React from 'react'
 import BaseLayout from '../components/baseLayout'
+import Video from '../components/video'
 import { getRoutes } from '../lib/files'
 import Route from '../types/route'
-
+import dynamic from 'next/dynamic'
 const { Text, Title } = Typography
 
 interface HomeProps {
     routes: Route[]
 }
+
+const ReactPlayer = dynamic(import('react-player'), {
+    ssr: false,
+    loading: () => <p>Loading player...</p>,
+})
 
 export default function Home(props: HomeProps) {
     return (
@@ -22,10 +28,14 @@ export default function Home(props: HomeProps) {
                     style={{
                         height: '80vh',
                         width: '100%',
-                        backgroundColor: 'blue',
+                        backgroundColor: '',
+                        padding: '10px',
                     }}
                 >
                     <Title>Return to the Radio with Sherlock Holmes</Title>
+                    <div style={{ zIndex: 10 }}>
+                        
+                    </div>
                 </div>
             }
         >

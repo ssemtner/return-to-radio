@@ -20,8 +20,9 @@ export default function Video(props: videoProps) {
                 __html: `<iframe
                         width='${props.width || 520}'
                         height='${props.height || 315}'
-                        src='https://www.youtube-nocookie.com/embed/${id}'
+                        src='https://www.youtube.com/embed/${id}'
                         frameborder='0'
+                        allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
                         allowfullscreen
                     />`,
             }}
