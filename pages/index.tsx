@@ -1,94 +1,22 @@
-import { Card, Col, Divider, Row, Typography } from 'antd'
-import { GetStaticProps } from 'next'
-import Head from 'next/head'
-import Link from 'next/link'
+import Image from 'next/image'
 import React from 'react'
-import BaseLayout from '../components/baseLayout'
-import Video from '../components/video'
-import { getRoutes } from '../lib/files'
-import Route from '../types/route'
-import dynamic from 'next/dynamic'
-const { Text, Title } = Typography
 
-interface HomeProps {
-    routes: Route[]
-}
-
-const ReactPlayer = dynamic(import('react-player'), {
-    ssr: false,
-    loading: () => <p>Loading player...</p>,
-})
-
-export default function Home(props: HomeProps) {
+export default function Home() {
     return (
-        <BaseLayout
-            routes={props.routes}
-            noMargin={
-                <div
-                    style={{
-                        height: '80vh',
-                        width: '100%',
-                        backgroundColor: '',
-                        padding: '10px',
-                    }}
-                >
-                    <Title>Return to the Radio with Sherlock Holmes</Title>
-                    <div style={{ zIndex: 10 }}>
-                        
-                    </div>
-                </div>
-            }
-        >
-            <Head>
-                <title>Return to Radio</title>
-            </Head>
-
-            <Row>
-                <Col span={8}>
-                    <img src='/sherlock.png' height={300} />
-                </Col>
-                <Col span={8}>
-                    <img src='/logo.png' height={300} />
-                </Col>
-                <Col span={8}>
-                    <img src='/magnifying-glass.png' height={300} />
-                </Col>
-            </Row>
-
-            <Divider />
-
-            <Title level={3}>Subtitle</Title>
-
-            <div style={{ textAlign: 'left', margin: '0 5vw' }}>
-                <Text>
-                    Before TicTok and Youtube, Television and Film, families
-                    used to gather around the radio in the evenings to listen to
-                    plays performed live on air. In this project we will
-                    consider the purpose of entertainment and how different
-                    forms of entertainment can bring people together.
-                </Text>
-            </div>
-
-            <Divider />
-
-            <Row gutter={[16, 16]}>
-                {props.routes.map((play) => (
-                    <Col key={play.path} xs={24} lg={12}>
-                        <Link href={play.path}>
-                            <Card hoverable>
-                                <Title level={4}>{play.name}</Title>
-                                <Text>{play.description}</Text>
-                            </Card>
-                        </Link>
-                    </Col>
-                ))}
-            </Row>
-        </BaseLayout>
+        <img
+            src='/poster.png'
+            style={{
+                maxWidth: '90%',
+                maxHeight: '90%',
+                bottom: '0',
+                left: '0',
+                margin: 'auto',
+                overflow: 'auto',
+                position: 'fixed',
+                right: '0',
+                top: '0',
+                objectFit: 'contain',
+            }}
+        />
     )
-}
-
-export const getStaticProps: GetStaticProps = async () => {
-    return {
-        props: { routes: getRoutes() },
-    }
 }
