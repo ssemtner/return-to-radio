@@ -2,11 +2,11 @@ import Image from 'next/image'
 import React from 'react'
 import { Typography } from 'antd'
 
-const {Title} = Typography
+const { Title } = Typography
 
 export default function Home() {
     return (
-        <>
+        <div style={{ textAlign: 'center' }}>
             <Title>More Information Coming Soon!</Title>
             <img
                 src='/poster.png'
@@ -23,6 +23,6 @@ export default function Home() {
                     objectFit: 'contain',
                 }}
             />
-        </>
+        </div>
     )
 }
