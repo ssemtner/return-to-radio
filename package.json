@@ -1,27 +1,38 @@
 {
-  "name": "return-to-radio",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
-  },
-  "dependencies": {
-    "antd": "^4.12.3",
-    "framer-motion": "^3.6.1",
-    "gray-matter": "^4.0.2",
-    "next": "10.0.7",
-    "react": "17.0.1",
-    "react-dom": "17.0.1",
-    "react-particles-js": "^3.4.1",
-    "react-player": "^2.9.0",
-    "remark": "^13.0.0",
-    "remark-html": "^13.0.1"
-  },
-  "devDependencies": {
-    "@types/node": "^14.14.28",
-    "@types/react": "^17.0.2",
-    "typescript": "^4.1.5"
-  }
+    "name": "return-to-radio",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start"
+    },
+    "dependencies": {
+        "antd": "^4.12.3",
+        "framer-motion": "^3.6.1",
+        "next": "^10.0.7",
+        "react": "17.0.1",
+        "react-dom": "17.0.1",
+        "react-particles-js": "^3.4.1"
+    },
+    "devDependencies": {
+        "@types/node": "^14.14.28",
+        "@types/react": "^17.0.2",
+        "typescript": "^4.1.5"
+    },
+    "description": "This is a quick website to show off our school's radio play performances. I decided to build it in react and next.js because I wanted to get more experiance using them even if it is overkill.",
+    "main": "index.js",
+    "directories": {
+        "lib": "lib"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ssemtner/return-to-radio.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/ssemtner/return-to-radio/issues"
+    },
+    "homepage": "https://return-to-radio.vercel.app"
 }

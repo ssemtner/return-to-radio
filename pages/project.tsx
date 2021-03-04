@@ -1,16 +1,21 @@
-import { Typography } from 'antd'
 import { GetStaticProps } from 'next'
+import Head from 'next/head'
 import React from 'react'
 import BaseLayout from '../components/baseLayout'
 import { getRoutes } from '../lib/files'
 import Route from '../types/route'
 
-const { Title, Text } = Typography
+interface ProjectProps {
+    routes: Route[]
+}
 
-export default function Posters({ routes }: { routes: Route[] }) {
+export default function Project(props: ProjectProps) {
     return (
-        <BaseLayout routes={routes}>
-            <Title>Posters</Title>
+        <BaseLayout routes={props.routes}>
+            <Head>
+                <title>Our Project</title>
+            </Head>
+            <p>Test</p>
         </BaseLayout>
     )
 }

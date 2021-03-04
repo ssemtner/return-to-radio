@@ -1,9 +1,11 @@
 {
     "title": "The Case of the Dead Adventures",
     "team": "Lemon",
-    "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    "date": "March 15th/16th",
+    "url": "https://www.youtube.com/watch?v=KW32iBOZUuw",
+    "liveUrl": "https://www.youtube.com/watch?v=KW32iBOZUuw",
+    "date": "March 16th, 5:30 pm",
     "complete": false,
+    "live": false,
     "description": "Hi! Here is some text that is a description of the play. Here is some text that is a description of the play. Here is sometext that is a description of the play. Here is some text that is a description of the play. Here is some text that is a description of the play. Here is some text that is a description of the play.",
     "cast": {
         "assistantDirectors": ["Easha A", "Stella M"],

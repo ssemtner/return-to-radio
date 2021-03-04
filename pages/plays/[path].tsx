@@ -1,10 +1,9 @@
-import { Col, Divider, Row, Space, Typography } from 'antd'
+import { Button, Col, Divider, Row, Space, Typography } from 'antd'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import Head from 'next/head'
 import React from 'react'
 import BaseLayout from '../../components/baseLayout'
 import Casting from '../../components/casting'
-import Video from '../../components/video'
 import { getAllPlays, getRoutes } from '../../lib/files'
 import Play from '../../types/play'
 import Route from '../../types/route'
@@ -31,10 +30,33 @@ export default function PlayDetails(props: PlayDetailsProps) {
                     </Col>
                     <Col span={8}>
                         <Title level={3}>Team {props.play.team}</Title>
-                        {props.play.complete || (
-                            <Title level={4}>
-                                Come watch our performance on {props.play.date}
-                            </Title>
+                        {props.play.complete ? (
+                            <Button
+                                href={props.play.url}
+                                target='_blank'
+                                size='large'
+                                type='primary'
+                                style={{ margin: '10px' }}
+                            >
+                                Watch Recording
+                            </Button>
+                        ) : (
+                            <>
+                                <Title level={4}>
+                                    Come watch our performance on{' '}
+                                    {props.play.date}
+                                </Title>
+
+                                <Button
+                                    href={props.play.liveUrl}
+                                    target='_blank'
+                                    size='large'
+                                    type='primary'
+                                    style={{ margin: '10px' }}
+                                >
+                                    Watch Live
+                                </Button>
+                            </>
                         )}
                         <div style={{ textAlign: 'left' }}>
                             <Text>{props.play.description}</Text>
@@ -44,8 +66,6 @@ export default function PlayDetails(props: PlayDetailsProps) {
                         <img src='/magnifying-glass.png' height={200} />
                     </Col>
                 </Row>
-
-                {!props.play.complete || <Video url={props.play.url} />}
 
                 <br />
                 <Divider />

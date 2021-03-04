@@ -1,85 +1,109 @@
-import { Card, Col, Divider, Row, Typography } from 'antd'
+import {
+    Button,
+    Card,
+    Carousel,
+    Col,
+    Divider,
+    Row,
+    Space,
+    Typography,
+} from 'antd'
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
 import React from 'react'
 import BaseLayout from '../components/baseLayout'
-import Video from '../components/video'
 import { getRoutes } from '../lib/files'
 import Route from '../types/route'
-import dynamic from 'next/dynamic'
-const { Text, Title } = Typography
+
+const { Title, Text } = Typography
 
 interface HomeProps {
     routes: Route[]
 }
 
-const ReactPlayer = dynamic(import('react-player'), {
-    ssr: false,
-    loading: () => <p>Loading player...</p>,
-})
-
 export default function Home(props: HomeProps) {
     return (
-        <BaseLayout
-            routes={props.routes}
-            noMargin={
-                <div
-                    style={{
-                        height: '80vh',
-                        width: '100%',
-                        backgroundColor: '',
-                        padding: '10px',
-                    }}
-                >
-                    <Title>Return to the Radio with Sherlock Holmes</Title>
-                    <div style={{ zIndex: 10 }}>
-                        
-                    </div>
-                </div>
-            }
-        >
+        <BaseLayout routes={props.routes}>
             <Head>
-                <title>Return to Radio</title>
+                <title>Return to the Radio</title>
             </Head>
 
+            <Title>Return to the Radio with Sherlock Holmes</Title>
+            <Title level={3} style={{ fontWeight: 'lighter' }}>
+                Directed and Produced by Damon J. Shearer
+            </Title>
+
+            <br />
+
             <Row>
-                <Col span={8}>
-                    <img src='/sherlock.png' height={300} />
+                <Col span={0} md={8}>
+                    <img src='/sherlock.png' height={200} />
                 </Col>
-                <Col span={8}>
-                    <img src='/logo.png' height={300} />
+                <Col span={24} md={8}>
+                    <img src='/logo.png' height={200} />
                 </Col>
-                <Col span={8}>
-                    <img src='/magnifying-glass.png' height={300} />
+                <Col span={0} md={8}>
+                    <img src='/magnifying-glass.png' height={200} />
                 </Col>
             </Row>
 
             <Divider />
 
-            <Title level={3}>Subtitle</Title>
+            <Title level={2}>
+                Watch our performances live on March 15th and 16th
+            </Title>
 
-            <div style={{ textAlign: 'left', margin: '0 5vw' }}>
-                <Text>
-                    Before TicTok and Youtube, Television and Film, families
-                    used to gather around the radio in the evenings to listen to
-                    plays performed live on air. In this project we will
-                    consider the purpose of entertainment and how different
-                    forms of entertainment can bring people together.
-                </Text>
-            </div>
+            {/* <Carousel autoplay arrows>
+                {props.routes.map((play) => (
+                    <Card hoverable style={{ padding: '200px' }}>
+                        <Title level={4}>{play.name}</Title>
+                        <Title level={5}>{play.date}</Title>
+                        <Text>{play.description}</Text>
 
-            <Divider />
+                        <br />
+                        <br />
+
+                        <Space>
+                            <Button
+                                href={play.url}
+                                target='_blank'
+                                type='primary'
+                            >
+                                Watch Live
+                            </Button>
+                            <Link href={play.path}>
+                                <Button>Read More</Button>
+                            </Link>
+                        </Space>
+                    </Card>
+                ))}
+            </Carousel> */}
 
             <Row gutter={[16, 16]}>
                 {props.routes.map((play) => (
                     <Col key={play.path} xs={24} lg={12}>
-                        <Link href={play.path}>
-                            <Card hoverable>
-                                <Title level={4}>{play.name}</Title>
-                                <Text>{play.description}</Text>
-                            </Card>
-                        </Link>
+                        <Card hoverable>
+                            <Title level={4}>{play.name}</Title>
+                            <Title level={5}>{play.date}</Title>
+                            <Text>{play.description}</Text>
+
+                            <br />
+                            <br />
+
+                            <Space>
+                                <Button
+                                    href={play.url}
+                                    target='_blank'
+                                    type='primary'
+                                >
+                                    Watch Live
+                                </Button>
+                                <Link href={play.path}>
+                                    <Button>Read More</Button>
+                                </Link>
+                            </Space>
+                        </Card>
                     </Col>
                 ))}
             </Row>
