@@ -102,6 +102,13 @@ export default function Home(props: HomeProps) {
                                             ) !== -1
                                         )
                                     })
+                                    .sort((a, b) =>
+                                        a.date > b.date
+                                            ? 1
+                                            : b.date > a.date
+                                            ? -1
+                                            : 0
+                                    )
                                     .map((play) => (
                                         <Col flex='1'>
                                             <Title level={5}>{play.name}</Title>

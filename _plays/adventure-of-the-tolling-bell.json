@@ -1,0 +1,48 @@
+{
+    "title": "Adventure of the Tolling Bell",
+    "team": "Ice",
+    "url": "https://youtu.be/qrqcqWpfVt8",
+    "liveUrl": "https://youtu.be/qrqcqWpfVt8",
+    "date": "March 15th, 4:30 pm",
+    "complete": false,
+    "live": true,
+    "description": "Team Ice’s performance of Adventure of the Tolling Bell is an adaptation of the 1945 airing of the original Sherlock Holmes radio drama written by Denis Greene and Bruce Taylor. Join Dr. Watson as he tells the story of the time when, while on vacation, Sherlock Holmes takes on the investigation of the disappearance of a local boy.",
+    "cast": {
+        "assistantDirectors": ["Elizabeth G", "Edward H"],
+        "foleyArtists": ["Jacob A", "Remi M", "Ella T"],
+        "actors": [
+            {
+                "role": "Sherlock Holmes",
+                "actor": "Diego H"
+            },
+            {
+                "role": "Dr. Watson",
+                "actor": "Gen L"
+            },
+            {
+                "role": "Gillian",
+                "actor": "Adonijah D"
+            },
+            {
+                "role": "Mary",
+                "actor": "Anna L"
+            },
+            {
+                "role": "Announcer",
+                "actor": "Sophia P"
+            },
+            {
+                "role": "Mrs. Lakland",
+                "actor": "Sophia P"
+            },
+            {
+                "role": "Mrs. Michol",
+                "actor": "Claire Le B"
+            },
+            {
+                "role": "Tom Lakland",
+                "actor": "Noah M"
+            }
+        ]
+    }
+}

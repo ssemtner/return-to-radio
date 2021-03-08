@@ -1,0 +1,60 @@
+{
+    "title": "Murder in the Casbah",
+    "team": "Sugar",
+    "url": "https://youtu.be/KW32iBOZUuw",
+    "liveUrl": "https://youtu.be/KW32iBOZUuw",
+    "date": "March 16th, 4:30 pm",
+    "complete": false,
+    "live": true,
+    "description": "Team Sugar’s performance of Murder in the Casbah is an adaptation of the 1945 airing of the original Sherlock Holmes radio drama written by Denis Greene and Anthony Boucher. Join Dr. Watson as he tells the story of his adventure with Sherlock Holmes in the dangerous district of the Casbah to retrieve a woman’s fiancee wrongly accused of murder.",
+    "cast": {
+        "assistantDirectors": ["Lev F", "Jillian H"],
+        "foleyArtists": ["Antonio Machaz", "Nithin Sai", "Isabella Verastigue"],
+        "actors": [
+            {
+                "role": "Sherlock Holmes",
+                "actor": "Liz B-O"
+            },
+            {
+                "role": "Dr. Watson",
+                "actor": "Isaiah D"
+            },
+            {
+                "role": "Ayisha",
+                "actor": "Maleah T"
+            },
+            {
+                "role": "Rafi",
+                "actor": "Kras C"
+            },
+            {
+                "role": "Announcer",
+                "actor": "Taher H"
+            },
+            {
+                "role": "Oliver Leaming",
+                "actor": "Taher H"
+            },
+            {
+                "role": "Miss Tetfield",
+                "actor": "Lori R"
+            },
+            {
+                "role": "Waiter",
+                "actor": "Lori R"
+            },
+            {
+                "role": "Commissioner",
+                "actor": "Lori R"
+            },
+            {
+                "role": "Colonel de Brisson",
+                "actor": "Max G"
+            },
+            {
+                "role": "Douglas Milton",
+                "actor": "Max G"
+            }
+        ]
+    }
+}
