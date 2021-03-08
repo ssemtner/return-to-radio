@@ -4,9 +4,9 @@
     "url": "https://www.youtube.com/watch?v=KW32iBOZUuw",
     "liveUrl": "https://www.youtube.com/watch?v=KW32iBOZUuw",
     "date": "March 16th, 5:30 pm",
-    "complete": true,
-    "live": false,
-    "description": "Team Lemon’s performance of Case of the Dead Adventures is an adaptation of the 1945 airing of the original Sherlock Holmes radio drama written by Denis Greene and Bruce Taylor. Join Dr. Watson as he tells the story of the time Sherlock Holmes was arrested for murder while working a case in the south of France and their journey to discover the truth. ",
+    "complete": false,
+    "live": true,
+    "description": "Team Lemon’s performance of Case of the Dead Adventures is an adaptation of the 1945 airing of the original Sherlock Holmes radio drama written by Denis Greene and Bruce Taylor. Join Dr. Watson as he tells the story of the time Sherlock Holmes was arrested for murder while working a case in the south of France and their journey to discover the truth.",
     "cast": {
         "assistantDirectors": ["Easha A", "Stella M"],
         "foleyArtists": ["Tamsen B", "Zane C", "Sofia Tamayo"],

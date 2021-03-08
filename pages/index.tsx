@@ -88,31 +88,47 @@ export default function Home(props: HomeProps) {
             </Title>
 
             <Row gutter={[16, 16]}>
-                {props.routes.map((play) => (
-                    <Col key={play.path} xs={24} lg={12}>
-                        <Card hoverable>
-                            <Title level={4}>{play.name}</Title>
-                            <Title level={5}>{play.date}</Title>
-                            <div style={{ textAlign: 'left' }}>
-                                <Text>{play.description}</Text>
-                            </div>
-
+                {['Monday, March 15th', 'Tuesday, March 16th'].map((date) => (
+                    <Col key={date} xs={24} lg={12}>
+                        <Card>
+                            <Title level={3}>{date}, 2021</Title>
                             <br />
-                            <br />
+                            <Row>
+                                {props.routes
+                                    .filter((i) => {
+                                        return (
+                                            i.date.indexOf(
+                                                date.split(' ')[2]
+                                            ) !== -1
+                                        )
+                                    })
+                                    .map((play) => (
+                                        <Col flex='1'>
+                                            <Title level={5}>{play.name}</Title>
+                                            <Title level={5}>
+                                                {play.date.split(' ')[2]} PM PST
+                                            </Title>
 
-                            <Space>
-                                <Button
-                                    href={play.url}
-                                    target='_blank'
-                                    type='primary'
-                                    size='large'
-                                >
-                                    Watch Live
-                                </Button>
-                                <Link href={play.path}>
-                                    <Button size='large'>Read More</Button>
-                                </Link>
-                            </Space>
+                                            <br />
+
+                                            <Space>
+                                                <Button
+                                                    href={play.url}
+                                                    target='_blank'
+                                                    type='primary'
+                                                    size='large'
+                                                >
+                                                    Watch Live
+                                                </Button>
+                                                <Link href={play.path}>
+                                                    <Button size='large'>
+                                                        Read More
+                                                    </Button>
+                                                </Link>
+                                            </Space>
+                                        </Col>
+                                    ))}
+                            </Row>
                         </Card>
                     </Col>
                 ))}

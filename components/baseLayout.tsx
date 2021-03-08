@@ -15,11 +15,7 @@ export default function BaseLayout(props: BaseLayoutProps) {
             <Affix offsetTop={0}>
                 <Layout.Header>
                     <Navbar
-                        routes={[
-                            { name: 'Home', path: '/' },
-                            { name: 'Our Project', path: '/project' },
-                            ...props.routes,
-                        ]}
+                        routes={[{ name: 'Home', path: '/' }, ...props.routes]}
                     />
                 </Layout.Header>
             </Affix>
