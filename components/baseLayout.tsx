@@ -15,7 +15,12 @@ export default function BaseLayout(props: BaseLayoutProps) {
             <Affix offsetTop={0}>
                 <Layout.Header>
                     <Navbar
-                        routes={[{ name: 'Home', path: '/' }, ...props.routes]}
+                        routes={[
+                            { name: 'Home', path: '/' },
+                            ...props.routes.sort((a, b) =>
+                                a.date > b.date ? 1 : b.date > a.date ? -1 : 0
+                            ),
+                        ]}
                     />
                 </Layout.Header>
             </Affix>
