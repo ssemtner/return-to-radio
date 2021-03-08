@@ -16,6 +16,8 @@ interface PlayDetailsProps {
 }
 
 export default function PlayDetails(props: PlayDetailsProps) {
+    const datetime: string[] = props.play.date.split(' ')
+
     return (
         <BaseLayout routes={props.routes}>
             <Head>
@@ -43,8 +45,9 @@ export default function PlayDetails(props: PlayDetailsProps) {
                         ) : (
                             <>
                                 <Title level={4}>
-                                    Come watch our performance on{' '}
-                                    {props.play.date}
+                                    Watch our performance live at {datetime[2]}{' '}
+                                    {datetime[3]} on {datetime[0]}{' '}
+                                    {datetime[1].split(',')[0]}
                                 </Title>
 
                                 <Button
@@ -52,25 +55,22 @@ export default function PlayDetails(props: PlayDetailsProps) {
                                     target='_blank'
                                     size='large'
                                     type='primary'
-                                    style={{ margin: '10px' }}
                                 >
                                     Watch Live
                                 </Button>
                             </>
                         )}
-                        <div style={{ textAlign: 'left' }}>
-                            <Text>{props.play.description}</Text>
-                        </div>
                     </Col>
                     <Col span={8}>
                         <img src='/magnifying-glass.png' height={200} />
                     </Col>
                 </Row>
 
-                <br />
-                <Divider />
+                <div style={{ textAlign: 'left', margin: '10px 10vw' }}>
+                    <Text>{props.play.description}</Text>
+                </div>
 
-                <Title level={5}>Directed By Damon J. Shearer</Title>
+                <Divider />
 
                 <Casting cast={props.play.cast} />
             </Space>

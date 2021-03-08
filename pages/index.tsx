@@ -1,8 +1,8 @@
 import {
     Button,
     Card,
-    Carousel,
     Col,
+    Collapse,
     Divider,
     Row,
     Space,
@@ -48,37 +48,44 @@ export default function Home(props: HomeProps) {
                 </Col>
             </Row>
 
+            <br />
+            <br />
+
+            <Collapse bordered={false}>
+                <Collapse.Panel key='' header='About Our Project'>
+                    <div style={{ textAlign: 'left' }}>
+                        <Text>
+                            Team Lemonaide brings you Return to the Radio with
+                            Sherlock Holmes! In this project, the different
+                            teams in Team Lemonaide worked to adapt and perform
+                            four different episodes of the 1945 Sherlock Holmes
+                            radio drama written by Denis Greene and Bruce
+                            Taylor. Each team was assigned four different jobs,
+                            those jobs consisted of assistant directors, foley
+                            artists, marketing, and actors. As the name suggests
+                            the assistant directors worked in assisting our main
+                            director, Damon J. Shearer, in helping the marketing
+                            team, the foley artists, and the actors. Foley
+                            artists were in charge of the curation of the sound
+                            effects and music for each of the plays. Actors took
+                            on the roles that the original plays provided and
+                            the marketing team was responsible for the making of
+                            this very website, the posters, our social media,
+                            and getting the word out about our plays. After
+                            several weeks of hard work and dedication, we now
+                            share with you our adaptations of Adventure of the
+                            Tolling Bell, A Scandal in Bohemia, Murder in the
+                            Casbah, and Case of the Dead Adventures!
+                        </Text>
+                    </div>
+                </Collapse.Panel>
+            </Collapse>
+
             <Divider />
 
             <Title level={2}>
                 Watch our performances live on March 15th and 16th
             </Title>
-
-            {/* <Carousel autoplay arrows>
-                {props.routes.map((play) => (
-                    <Card hoverable style={{ padding: '200px' }}>
-                        <Title level={4}>{play.name}</Title>
-                        <Title level={5}>{play.date}</Title>
-                        <Text>{play.description}</Text>
-
-                        <br />
-                        <br />
-
-                        <Space>
-                            <Button
-                                href={play.url}
-                                target='_blank'
-                                type='primary'
-                            >
-                                Watch Live
-                            </Button>
-                            <Link href={play.path}>
-                                <Button>Read More</Button>
-                            </Link>
-                        </Space>
-                    </Card>
-                ))}
-            </Carousel> */}
 
             <Row gutter={[16, 16]}>
                 {props.routes.map((play) => (
@@ -86,7 +93,9 @@ export default function Home(props: HomeProps) {
                         <Card hoverable>
                             <Title level={4}>{play.name}</Title>
                             <Title level={5}>{play.date}</Title>
-                            <Text>{play.description}</Text>
+                            <div style={{ textAlign: 'left' }}>
+                                <Text>{play.description}</Text>
+                            </div>
 
                             <br />
                             <br />
@@ -96,11 +105,12 @@ export default function Home(props: HomeProps) {
                                     href={play.url}
                                     target='_blank'
                                     type='primary'
+                                    size='large'
                                 >
                                     Watch Live
                                 </Button>
                                 <Link href={play.path}>
-                                    <Button>Read More</Button>
+                                    <Button size='large'>Read More</Button>
                                 </Link>
                             </Space>
                         </Card>
