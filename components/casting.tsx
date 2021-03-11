@@ -30,14 +30,14 @@ export default function Casting({ cast }: { cast: Cast }) {
     return (
         <Collapse bordered={false} style={{ margin: '0 5vw' }}>
             {generatePanel({
-                key: 'actors',
-                header: 'Actors',
-                body: cast.actors.map((e) => e.role + ': ' + e.actor).sort(),
-            })}
-            {generatePanel({
                 key: 'assistantDirectors',
                 header: 'Assistant Directors',
                 body: cast.assistantDirectors.sort(),
+            })}
+            {generatePanel({
+                key: 'actors',
+                header: 'Cast',
+                body: cast.actors.map((e) => e.role + ': ' + e.actor).sort(),
             })}
             {generatePanel({
                 key: 'foleyArtists',
