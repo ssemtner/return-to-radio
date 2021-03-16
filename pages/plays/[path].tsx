@@ -33,15 +33,22 @@ export default function PlayDetails(props: PlayDetailsProps) {
                     <Col span={8}>
                         <Title level={3}>Team {props.play.team}</Title>
                         {props.play.complete ? (
-                            <Button
-                                href={props.play.url}
-                                target='_blank'
-                                size='large'
-                                type='primary'
-                                style={{ margin: '10px' }}
-                            >
-                                Watch Recording
-                            </Button>
+                            <>
+                                <Title level={4}>
+                                    Performed live on {datetime[0]}{' '}
+                                    {datetime[1].split(',')[0]}
+                                </Title>
+
+                                <Button
+                                    href={props.play.url}
+                                    target='_blank'
+                                    size='large'
+                                    type='primary'
+                                    style={{ margin: '10px' }}
+                                >
+                                    Watch Recording
+                                </Button>
+                            </>
                         ) : (
                             <>
                                 <Title level={4}>

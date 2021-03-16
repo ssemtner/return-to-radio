@@ -4,8 +4,8 @@
     "url": "https://youtu.be/t_fICGkZn_Q",
     "liveUrl": "https://youtu.be/t_fICGkZn_Q",
     "date": "March 15th, 5:30 pm",
-    "complete": false,
-    "live": true,
+    "complete": true,
+    "live": false,
     "description": "Team Water’s performance of A Scandal in Bohemia is an adaptation of the 1945 airing of the original Sherlock Holmes radio drama written by Denis Greene and Bruce Taylor. Join Dr. Watson as he tells the story of when Sherlock Holmes finally met his match when employed by the King of Bohemia to retrieve a certain photograph.",
     "cast": {
         "assistantDirectors": ["Mitchell L", "Camryn S"],

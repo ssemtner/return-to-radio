@@ -125,7 +125,7 @@ export default function Home(props: HomeProps) {
                                                     type='primary'
                                                     size='large'
                                                 >
-                                                    Watch Live
+                                                    {play.live ? ('Watch Live') : ('Watch Here')}
                                                 </Button>
                                                 <Link href={play.path}>
                                                     <Button size='large'>

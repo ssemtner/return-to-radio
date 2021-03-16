@@ -4,8 +4,8 @@
     "url": "https://youtu.be/qrqcqWpfVt8",
     "liveUrl": "https://youtu.be/qrqcqWpfVt8",
     "date": "March 15th, 4:30 pm",
-    "complete": false,
-    "live": true,
+    "complete": true,
+    "live": false,
     "description": "Team Ice’s performance of Adventure of the Tolling Bell is an adaptation of the 1945 airing of the original Sherlock Holmes radio drama written by Denis Greene and Bruce Taylor. Join Dr. Watson as he tells the story of the time when, while on vacation, Sherlock Holmes takes on the investigation of the disappearance of a local boy.",
     "cast": {
         "assistantDirectors": ["Elizabeth G", "Edward H"],

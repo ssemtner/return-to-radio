@@ -4,6 +4,7 @@ type Route = {
     description?: string
     url?: string
     date?: string
+    live?: boolean
 }
 
 export default Route

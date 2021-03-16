@@ -19,6 +19,7 @@ export function getRoutes() {
             path: `/plays/${item}`,
             url: data.liveUrl,
             date: data.date,
+            live: data.live,
         }
     })
 }
