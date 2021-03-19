@@ -4,8 +4,8 @@
     "url": "https://youtu.be/Ii-GQoewTNA",
     "liveUrl": "https://youtu.be/Ii-GQoewTNA",
     "date": "March 16th, 4:30 pm",
-    "complete": false,
-    "live": true,
+    "complete": true,
+    "live": false,
     "description": "Team Sugar’s performance of Murder in the Casbah is an adaptation of the 1945 airing of the original Sherlock Holmes radio drama written by Denis Greene and Anthony Boucher. Join Dr. Watson as he tells the story of his adventure with Sherlock Holmes in the dangerous district of the Casbah to retrieve a woman’s fiancee wrongly accused of murder.",
     "cast": {
         "assistantDirectors": ["Lev F", "Jillian H"],
